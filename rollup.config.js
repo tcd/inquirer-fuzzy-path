@@ -6,18 +6,18 @@ import { nodeResolve } from "@rollup/plugin-node-resolve"
 const config = {
     input: "./src/InquirerFuzzyPath.ts",
     output: [
-        // {
-        //     // dir: "dist",
-        //     format: "esm",
-        //     file: "./lib/index.js",
-        //     sourcemap: true,
-        //     inlineDynamicImports: true,
-        // },
         {
-            file: "dist/index.cjs",
-            format: "cjs",
-            exports: "named",
+            // dir: "dist",
+            format: "esm",
+            file: "./lib/index.js",
+            // sourcemap: true,
+            // inlineDynamicImports: true,
         },
+        // {
+        //     file: "dist/index.cjs",
+        //     format: "cjs",
+        //     exports: "named",
+        // },
     ],
     external: [
         "fuzzy",
