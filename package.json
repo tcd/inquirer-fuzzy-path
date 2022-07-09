@@ -15,7 +15,7 @@
     "engines": {
         "node": ">=8.0"
     },
-    "main": "lib/index.cjs",
+    "main": "lib/index.js",
     "scripts": {
         "build": "npm run build:rollup",
         "build:rollup": "cross-env NODE_ENV=production rollup -c rollup.config.js",
