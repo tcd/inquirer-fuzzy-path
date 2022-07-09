@@ -12,36 +12,36 @@ Fuzzy file/directory search and select prompt for Inquirer.js
 
 Register the prompt with inquirer:
 ```javascript
-inquirer.registerPrompt('fuzzypath', require('inquirer-fuzzy-path'))
+inquirer.registerPrompt("fuzzypath", require("inquirer-fuzzy-path"))
 ```
 
 Call the prompt:
 ```javascript
   return inquirer.prompt([
     {
-      type: 'fuzzypath',
-      name: 'path',
-      excludePath: nodePath => nodePath.startsWith('node_modules'),
-        // excludePath :: (String) -> Bool
+      type: "fuzzypath",
+      name: "path",
+      excludePath: nodePath => nodePath.startsWith("node_modules"),
+        // excludePath: (string) => boolean
         // excludePath to exclude some paths from the file-system scan
-      excludeFilter: nodePath => nodePath == '.',
-        // excludeFilter :: (String) -> Bool
-        // excludeFilter to exclude some paths from the final list, e.g. '.'
-      itemType: 'any',
-        // itemType :: 'any' | 'directory' | 'file'
+      excludeFilter: nodePath => nodePath == ".",
+        // excludeFilter: (string) => boolean
+        // excludeFilter to exclude some paths from the final list, e.g. "."
+      itemType: "any",
+        // itemType: "any" | "directory" | "file"
         // specify the type of nodes to display
-        // default value: 'any'
-        // example: itemType: 'file' - hides directories from the item list
-      rootPath: 'app',
-        // rootPath :: String
+        // default value: "any"
+        // example: itemType: "file" - hides directories from the item list
+      rootPath: "app",
+        // rootPath: string
         // Root search directory
-      message: 'Select a target directory for your component:',
-      default: 'components/',
+      message: "Select a target directory for your component:",
+      default: "components/",
       suggestOnly: false,
-        // suggestOnly :: Bool
+        // suggestOnly: boolean
         // Restrict prompt answer to available choices or use them as suggestions
       depthLimit: 5,
-        // depthLimit :: integer >= 0
+        // depthLimit: integer (greater than 0)
         // Limit the depth of sub-folders to scan
         // Defaults to infinite depth if undefined
     }
