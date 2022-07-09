@@ -1,6 +1,5 @@
 # inquirer-fuzzy-path
 
-
 [![npm](https://img.shields.io/npm/v/inquirer-fuzzy-path)](https://www.npmjs.com/package/inquirer-fuzzy-path)
 [![npm](https://img.shields.io/npm/dw/inquirer-fuzzy-path)](https://www.npmjs.com/package/inquirer-fuzzy-path)
 
@@ -47,11 +46,6 @@ Call the prompt:
     }
   ]);
 ```
-
-## Change log
-* In version 2.2.0 new option `excludeFilter` was added.
-* In version 2.1.0 new option `depthLimit` was added.
-* In version 2.0.0 option `filterPath` was deprecated. Please use `excludePath` and `itemType` instead.
 
 ## Related
 
