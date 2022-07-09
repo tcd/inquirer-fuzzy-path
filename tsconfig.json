@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "target": "es2015",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "downlevelIteration": true,
+        "removeComments": true,
+        "sourceMap": true,
+        "baseUrl": "./",
+        "types": [
+            "node"
+        ],
+        "typeRoots": [
+            "./node_modules/@types",
+        ],
+    },
+    "include": [
+        "src",
+    ]
+}
