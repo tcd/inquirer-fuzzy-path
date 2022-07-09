@@ -1,4 +1,5 @@
-import Choices from "inquirer/lib/objects/choices"
+// import { Choices } from "inquirer/lib/objects"
+// import Choices from "inquirer/lib/objects/choices"
 import InquirerAutocomplete from "inquirer-autocomplete-prompt"
 import stripAnsi from "strip-ansi"
 
@@ -35,7 +36,8 @@ export class InquirerFuzzyPath extends InquirerAutocomplete<any> {
     search(searchTerm: string) {
         return super.search(searchTerm).then(() => {
             this.currentChoices.getChoice = (choiceIndex) => {
-                const choice = Choices.prototype.getChoice.call(this.currentChoices, choiceIndex)
+                // const choice = Choices.prototype.getChoice.call(this.currentChoices, choiceIndex)
+                const choice = this.currentChoices.getChoice(choiceIndex)
                 return {
                     value: stripAnsi(choice.value),
                     name:  stripAnsi(choice.name),
